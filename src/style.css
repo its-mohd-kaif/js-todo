@@ -53,6 +53,7 @@ button {
 	cursor: pointer;
 }
 
+
 button:hover {
 	color: #333;
 }
@@ -139,6 +140,10 @@ li > .delete:hover {
 /* Completed */
 
 #completed-tasks label {
+	text-decoration: line-through;
+	color: #888;
+}
+#res {
 	text-decoration: line-through;
 	color: #888;
 }
