@@ -20,20 +20,20 @@ function add() {
   }
 }
 
-//Function to display the todo Array
+// Function to display the todo Array
 function display() {
-  var todo = "<ul>";
+  var todo = "<ul id='incomplete-tasks'>";
   arr.forEach((element) => {
     todo +=
-      '<input type="checkbox" onclick="comp(\'' +
+      '<li><input margin: 0 10px;position: relative;top: 15px; type="checkbox" onclick="comp(\'' +
       element.id +
-      "')\">" +
+      "')\"><label>" +
       element.data +
-      '<input type="button" onclick="edit(\'' +
+      '</label><input type="button" class="edit" onclick="edit(\'' +
       element.id +
       '\')" value="Edit"><input type="button" class="delete" onclick="delTodo(\'' +
       element.id +
-      '\')" value="Delete"><br>';
+      '\')" value="Delete"><br></li>';
   });
   todo += "</ul>";
   document.getElementById("output").innerHTML = todo;
@@ -51,20 +51,20 @@ function delTodo(val) {
 }
 //Funcyion to display complete tasks
 function completed() {
-  var str = "<ul>";
+  var str = "<ul id='completed-tasks'>";
   com.forEach((element) => {
     str +=
-      '<input type="checkbox" checked onclick="reverse(\'' +
+      '<li><input margin: 0 10px;position: relative;top: 15px; type="checkbox" checked onclick="reverse(\'' +
       element.id +
-      "' )\">" +
+      "' )\"><label>" +
       element.data +
-      '<input type="button" onclick="edit2(\'' +
+      '</label><input type="button" class="edit" onclick="edit2(\'' +
       element.id +
       '\')" value="Edit"><input type="button" class="delete" onclick="delComp(\'' +
       element.id +
       '\')" value="Delete"><br>';
   });
-  str += "</ul>";
+  str += "</li></ul>";
   document.getElementById("res").innerHTML = str;
 }
 
